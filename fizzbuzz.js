@@ -1,19 +1,28 @@
-for(int i=0;i<16;i++){
-			if(i%3==0){
-				System.out.print("Fizz");
-				flag=false;
-			}
+for (var i = 1; i <= 100; i++) {
+    // For each iteration,
+    // initialize an empty string
+    var string = ''; 
 
-			if(i%5==0){
-				System.out.print("Buzz");
-				flag=false;
-			}
+    // If `i` is divisible by 3
+    // with no remainder, append `Fizz`
+    if (i % 3 === 0) {
+        string += 'Fizz';
+    }
 
-			if (flag)
-				System.out.print(i);
+    // If `i` is divisible by 5
+    // with no remainder, append `Buzz`
+    if (i % 5 === 0) {
+        string += 'Buzz';
+    }
 
-			System.out.print(",");
+    // If `string` is still empty,
+    // `i` is not divisible by 3 or 5,
+    // so use the number instead.
+    if (string === '') {
+        string += i;
+    }
 
-			flag = true;
-
-		}
+    // At the end of each iteration, 
+    // print the string to the screen.
+    console.log(string);
+}
